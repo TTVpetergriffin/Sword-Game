@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class chaser : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class chaser : MonoBehaviour
     public AudioSource Spotted;
     public AudioClip Rev;
     public bool SpottedPlayed;
+    private NavMeshAgent Chaser;
+    public Transform ThePlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class chaser : MonoBehaviour
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Main Character");
         danger = false;
+        Chaser = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -33,7 +37,7 @@ public class chaser : MonoBehaviour
      if (danger == true)
         {
             Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-            enemyRb.AddForce(lookDirection * speed);
+            Chaser.SetDestination(ThePlayer.position);
         }
      if (danger == true && !SpottedPlayed)
         {
