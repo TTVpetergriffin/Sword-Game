@@ -6,7 +6,7 @@ public class PCamera : MonoBehaviour
 {
     public float mouseSensitivity = 2f;
     public Transform playerBody;
-    public float yOffset = 1f; // Adjust this value for the Y offset
+    public float yOffset; // Adjust this value for the Y offset
 
     private Vector2 currentRotation;
 
@@ -30,6 +30,14 @@ public class PCamera : MonoBehaviour
         // Camera following player with Y offset
         Vector3 desiredPosition = playerBody.position + yOffset * Vector3.up;
         transform.position = desiredPosition;
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            yOffset = 0.5f;
+        }
+        else 
+        {
+            yOffset = 1.0f;
+        }
     }
 }
 
