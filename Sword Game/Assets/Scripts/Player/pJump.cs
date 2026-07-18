@@ -33,10 +33,18 @@ public class pJump : MonoBehaviour
             playerRb.AddForce(Vector3.up * djumpForce, ForceMode.Impulse);
             djump = false;
         }
+
     }
     IEnumerator djumpstarter()
     {
         yield return new WaitForSeconds(0.01f);
         djump = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") )
+        {
+            isOnGround = true;
+        }
     }
 }

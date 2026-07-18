@@ -58,6 +58,10 @@ public class chaser : MonoBehaviour
         {
             danger = true;
         }
+        if (trigger.gameObject.tag == "EnemyDamage")
+        {
+            health--;
+        }
     }
     IEnumerator hitstop()
     {

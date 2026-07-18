@@ -140,6 +140,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1017034439293781622, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017034439293781622, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017034439293781622, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017034439293781622, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017376812367918504, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: yOffset
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353646176302999647, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: jumpForce
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 1453292230739868902, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -181,6 +205,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248147304103581063, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: hitbox
+      value: 
+      objectReference: {fileID: 1697360519}
+    - target: {fileID: 6248147304103581063, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 8016278663217904657, guid: 3cb1645d0769a6c4b8d066f9f6739d3c, type: 3}
@@ -203,6 +231,10 @@ PrefabInstance:
     - target: {fileID: 8173341884327394399, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
       propertyPath: m_Name
       value: Main Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560574502035142036, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8560574502035142036, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1449,6 +1481,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 31.5, y: -30, z: 0}
+--- !u!136 &1697360519 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 1017034439293781622, guid: cc80b6eb623d8b14da450e3200efaa7f, type: 3}
+  m_PrefabInstance: {fileID: 59831453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1776610014
 GameObject:
   m_ObjectHideFlags: 0

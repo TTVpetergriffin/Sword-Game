@@ -17,6 +17,7 @@ public class playerController : MonoBehaviour
     public GameObject GameOver;
     public TextMeshProUGUI healthtext;
     public GameObject TheActualPlayer;
+    private CapsuleCollider hitbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class playerController : MonoBehaviour
         IsWalking = false;
         health = 3;
         UpdateHealth(0);
+
     }
 
     // Update is called once per frame
@@ -54,9 +56,14 @@ void Update()
     {
         speed = 1;
     }
-    
-    // Moving left and right
-    if (Input.GetKey(KeyCode.A))
+        // Crouching
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            //CapsuleCollider.height = 1.0f;
+        }
+
+        // Moving left and right
+        if (Input.GetKey(KeyCode.A))
     {
         transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
