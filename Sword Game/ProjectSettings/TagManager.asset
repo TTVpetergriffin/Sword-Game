@@ -8,6 +8,8 @@ TagManager:
   - dangerzone
   - Enemy
   - EnemyDamage
+  - Undefined
+  - Bullet
   layers:
   - Default
   - TransparentFX

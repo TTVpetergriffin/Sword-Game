@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class pCrouch : MonoBehaviour
 {
-    public float slideForce = 20.0f;
+    public float slideForce = 200.0f;
     public bool canSlide;
     private Rigidbody playerRb;
     [SerializeField] private pJump pJumpScript;
@@ -17,7 +17,8 @@ public class pCrouch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl) && canSlide && pJumpScript.isOnGround == true)
         {
-        playerRb.AddForce(Vector3.forward * slideForce, ForceMode.Impulse);
+        Vector3 pushDirection = Camera.main.transform.forward;
+        playerRb.AddForce(pushDirection * slideForce, ForceMode.Impulse);
         canSlide = false;
         StartCoroutine(SlideWait());
         }
