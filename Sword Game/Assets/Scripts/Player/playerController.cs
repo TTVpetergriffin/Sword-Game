@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Data.SqlTypes;
 
 public class playerController : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class playerController : MonoBehaviour
     public TextMeshProUGUI healthtext;
     public GameObject TheActualPlayer;
     private CapsuleCollider hitbox;
+    public float money;
+    public TextMeshProUGUI moneytext;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +28,13 @@ public class playerController : MonoBehaviour
         IsWalking = false;
         health = 3;
         UpdateHealth(0);
-
+        UpdateMoney(0);
     }
 
     // Update is called once per frame
 void Update()
 {
-    horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
     forwardInput = Input.GetAxis("Vertical");
 
         // Check if there's any movement input
@@ -120,6 +123,11 @@ void Update()
     {
         health += healthToSteal;
         healthtext.text = "Health: " + health;
+    }
+    public void UpdateMoney(int MoneyDollar)
+    {
+        money += MoneyDollar;
+        moneytext.text = "Money: " + money;
     }
 }
 

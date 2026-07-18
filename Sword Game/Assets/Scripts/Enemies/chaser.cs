@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,6 +16,7 @@ public class chaser : MonoBehaviour
     public bool SpottedPlayed;
     private NavMeshAgent Chaser;
     public Transform ThePlayer;
+    [SerializeField] private playerController playerControllerScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,8 @@ public class chaser : MonoBehaviour
         if (health == 0)
         {
             Destroy(this.gameObject);
+            playerControllerScript.money++;
+            playerControllerScript.UpdateMoney(0);
         }
      if (danger == true)
         {
