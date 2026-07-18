@@ -127,7 +127,7 @@ void Update()
     public void UpdateMoney(int MoneyDollar)
     {
         money += MoneyDollar;
-        moneytext.text = "Money: " + money;
+        moneytext.text = ": " + money;
     }
 }
 
