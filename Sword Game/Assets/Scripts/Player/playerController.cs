@@ -115,9 +115,6 @@ void Update()
             health--;
             UpdateHealth(0);
         }
-        if (collision.gameObject.tag == "Wall")
-        {
-        }
     }
     private void UpdateHealth(int healthToSteal)
     {

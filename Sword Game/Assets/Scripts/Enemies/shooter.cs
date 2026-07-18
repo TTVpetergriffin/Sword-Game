@@ -93,7 +93,7 @@ public class shooter : MonoBehaviour
     }
     IEnumerator ShootCooldown()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.2f);
         CanShoot = true;
     }
 }
