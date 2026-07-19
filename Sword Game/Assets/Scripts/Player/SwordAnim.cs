@@ -1,8 +1,11 @@
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class SwordAnim : MonoBehaviour
 {
     Animator anim1;
+    public GameObject Player;
+    public bool swinging;
     void Start()
     {
         anim1 = GetComponent<Animator>();
@@ -11,7 +14,8 @@ public class SwordAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        swinging = Player.GetComponent<PSwordAttack>().Swinging;
+        if (Input.GetMouseButtonDown(0) && swinging == true)
         {
             anim1.SetTrigger("Attack");
         }

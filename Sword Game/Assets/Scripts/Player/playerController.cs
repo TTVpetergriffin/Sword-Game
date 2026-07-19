@@ -110,7 +110,7 @@ void Update()
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy Projectile")
         {
             health--;
             UpdateHealth(0);
@@ -119,7 +119,7 @@ void Update()
     private void UpdateHealth(int healthToSteal)
     {
         health += healthToSteal;
-        healthtext.text = "Health: " + health;
+        healthtext.text = ": " + health;
     }
     public void UpdateMoney(int MoneyDollar)
     {

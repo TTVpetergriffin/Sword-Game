@@ -6,10 +6,12 @@ public class PSwordAttack : MonoBehaviour
 {
     [SerializeField] private GameObject SwordSwingBasic;
     public bool CanSwing;
+    public bool Swinging;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         CanSwing = true;
+        Swinging = false;
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class PSwordAttack : MonoBehaviour
         {
             SwordSwingBasic.SetActive(true);
             CanSwing = false;
+            Swinging = true;
             StartCoroutine(SwordStop());
 
         }
@@ -27,6 +30,7 @@ public class PSwordAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(0.01f);
         SwordSwingBasic.SetActive(false);
+        Swinging = false;
         yield return new WaitForSeconds(0.5f);
         CanSwing = true;
     }
