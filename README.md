@@ -1,2 +1,2 @@
-dick and balls
-piss and shit
+dick and balls.
+piss and shit.
