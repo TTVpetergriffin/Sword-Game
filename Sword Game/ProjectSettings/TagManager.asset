@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - Enemy
   - Enemy Projectile
+  - HealthUp
+  - MaxHealth
   layers:
   - Default
   - TransparentFX

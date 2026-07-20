@@ -54,7 +54,7 @@ public class chaser : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            health - swordDamage;
+            health--;
         }
         if (collision.gameObject.tag == "Player")
         {

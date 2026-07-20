@@ -1302,6 +1302,7 @@ MonoBehaviour:
   tomfoolery: 0
   IsWalking: 0
   health: 0
+  maxHealth: 0
   GameOver: {fileID: 8016278663217904657, guid: 3cb1645d0769a6c4b8d066f9f6739d3c, type: 3}
   healthtext: {fileID: 359689440992917185}
   TheActualPlayer: {fileID: 161679787667597624}
@@ -1379,7 +1380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PSwordAttack
   SwordSwingBasic: {fileID: 5642498735015643312}
-  CanSwing: 0
+  CanSwing: 1
   Swinging: 0
 --- !u!1001 &5686634539859551789
 PrefabInstance:

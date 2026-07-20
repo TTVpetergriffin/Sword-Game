@@ -15,6 +15,7 @@ public class playerController : MonoBehaviour
     public bool tomfoolery;
     public bool IsWalking;
     public int health;
+    public int maxHealth;
     public GameObject GameOver;
     public TextMeshProUGUI healthtext;
     public GameObject TheActualPlayer;
@@ -29,6 +30,7 @@ public class playerController : MonoBehaviour
         health = 3;
         UpdateHealth(0);
         UpdateMoney(0);
+        maxHealth = 3;
     }
 
     // Update is called once per frame
@@ -93,6 +95,14 @@ void Update()
         {
             speed = 1;
             StartCoroutine(Soaft());
+        }
+        if (trigger.gameObject.tag == "HealthUp")
+        {
+            health += 1;
+        }
+        if (trigger.gameObject.tag == "MaxHealth")
+        {
+            health = maxHealth;
         }
     }
     private void OnTriggerExit(Collider trigger)
