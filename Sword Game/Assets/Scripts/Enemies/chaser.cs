@@ -8,6 +8,7 @@ public class chaser : MonoBehaviour
 {
     public float speed;
     public float health;
+    public float swordDamage;
     private Rigidbody enemyRb;
     private GameObject player;
     public bool danger;
@@ -53,7 +54,7 @@ public class chaser : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            health--;
+            health - swordDamage;
         }
         if (collision.gameObject.tag == "Player")
         {
