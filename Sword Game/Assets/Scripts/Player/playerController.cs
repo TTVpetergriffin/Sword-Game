@@ -98,11 +98,17 @@ void Update()
         }
         if (trigger.gameObject.tag == "HealthUp")
         {
-            health += 1;
+            if (gameObject.CompareTag("Player"))
+            {
+                health += 1;
+                UpdateHealth(0);
+                Destroy(trigger.gameObject);
+            }
         }
         if (trigger.gameObject.tag == "MaxHealth")
         {
             health = maxHealth;
+            UpdateHealth(0);
         }
     }
     private void OnTriggerExit(Collider trigger)
